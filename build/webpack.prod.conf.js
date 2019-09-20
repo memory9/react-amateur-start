@@ -1,6 +1,6 @@
 const merge = require('webpack-merge')
-const baseWebpackConfig = require('./webpack.base.conf')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const baseWebpackConfig = require('./webpack.base.conf')
 
 module.exports = merge(baseWebpackConfig, {
   mode: 'production',
@@ -11,8 +11,8 @@ module.exports = merge(baseWebpackConfig, {
       minify: {
         removeComments: true,
         collapseWhitespace: true,
-        removeAttributeQuotes: true
-      }
-    })
-  ]
+        removeAttributeQuotes: true,
+      },
+    }),
+  ],
 })

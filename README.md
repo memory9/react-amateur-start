@@ -1,2 +1,7 @@
 # react-amateur-start
-React start with webpack 4 and babel 7
+
+- [x] commitlint
+- [x] Eslint, prettier
+- [ ] webpack 4
+- [ ] babel 7
+
