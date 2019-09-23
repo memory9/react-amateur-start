@@ -30,7 +30,7 @@ module.exports = {
               modules: {
                 localIdentName: '[path][local]-[hash:base64:5]',
               },
-              localConvention: 'camelCase',
+              localsConvention: 'camelCase',
               sourceMap: true,
               importLoaders: 2,
             },
@@ -45,7 +45,7 @@ module.exports = {
         include: APP_PATH,
       },
       {
-        test: /.css$/,
+        test: /\.css$/,
         use: [
           {
             loader: process.env.NODE_ENV === 'production' ? MiniCssExtractPlugin.loader : 'style-loader',
