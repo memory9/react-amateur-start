@@ -12,6 +12,10 @@ const smp = new SpeedMeasurePlugin()
 
 const prodWebpackConfig = merge(baseWebpackConfig, {
   mode: 'production',
+  entry: {
+    app: './app/index.js',
+    framwork: ['react', 'react-dom'], // 抽出框架代码
+  },
   output: {
     filename: 'js/[name].[chunkhash:16].js',
   },

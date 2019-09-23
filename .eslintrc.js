@@ -42,6 +42,7 @@ module.exports = {
     "react-hooks/exhaustive-deps": 1,
     "import/no-extraneous-dependencies": 0,
     "react/jsx-filename-extension": 0,
+    "react/react-in-jsx-scope": 0,
     "global-require": 0
   }
 };

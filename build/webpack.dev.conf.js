@@ -8,6 +8,10 @@ const baseWebpackConfig = require('./webpack.base.conf')
 
 module.exports = merge(baseWebpackConfig, {
   mode: 'development',
+  entry: {
+    app: ['react-hot-loader/patch', './app/index.js'],
+    framwork: ['react', 'react-dom'], // 抽出框架代码
+  },
   output: {
     filename: 'js/[name].[hash:16].js',
   },
@@ -19,6 +23,13 @@ module.exports = merge(baseWebpackConfig, {
     }),
     new webpack.HotModuleReplacementPlugin(),
   ],
+  resolve: {
+    alias: {
+      'react-dom': '@hot-loader/react-dom',
+    },
+  },
+  cache: true,
+  devtool: 'cheap-module-eval-source-map',
   devServer: {
     port: '8080',
     contentBase: PUBLIC_PATH, // serve static files

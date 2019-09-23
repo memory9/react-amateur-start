@@ -5,10 +5,6 @@ const DIST_PATH = path.resolve(__dirname, '../dist')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
-  entry: {
-    app: './app/index.js',
-    framwork: ['react', 'react-dom'], // 抽出框架代码
-  },
   output: {
     path: DIST_PATH,
   },
