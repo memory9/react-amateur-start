@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./app/index.js"],"names":["ReactDom","render","document","getElementById"],"mappings":"wFAAA,yCAGAA,EAASC,OAAO,4CAAuBC,SAASC,eAAe,W","file":"js/app.c0147164f3d592e2.js","sourcesContent":["import React from 'react'\nimport ReactDom from 'react-dom'\n\nReactDom.render(<h1>Hello React!</h1>, document.getElementById('root'))\n"],"sourceRoot":""}
