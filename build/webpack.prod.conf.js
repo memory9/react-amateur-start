@@ -18,6 +18,7 @@ const prodWebpackConfig = merge(baseWebpackConfig, {
   },
   output: {
     filename: 'js/[name].[chunkhash:16].js',
+    publicPath: '/',
   },
   cache: false,
   devtool: 'source-map',
