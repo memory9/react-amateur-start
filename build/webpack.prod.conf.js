@@ -18,7 +18,7 @@ const prodWebpackConfig = merge(baseWebpackConfig, {
   },
   output: {
     filename: 'js/[name].[chunkhash:16].js',
-    publicPath: '/',
+    publicPath: '/react-amateur-start/',
   },
   cache: false,
   devtool: 'source-map',
