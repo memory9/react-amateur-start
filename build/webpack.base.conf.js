@@ -4,25 +4,32 @@ const APP_PATH = path.resolve(__dirname, '../app')
 const DIST_PATH = path.resolve(__dirname, '../dist')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
+// 使用 WEBPACK_SERVE 环境变量检测当前是否是在 webpack-server 启动的开发环境中
+const DEV = Boolean(process.env.WEBPACK_SERVE)
+
 module.exports = {
   output: {
     path: DIST_PATH,
   },
   resolve: {
+    alias: {
+      app: APP_PATH,
+      containers: path.resolve(APP_PATH, 'containers'),
+    },
     extensions: ['.js', 'json', 'jsx', 'scss', 'css', 'png', 'svg', 'jpg'],
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        use: process.env.NODE_ENV === 'production' ? 'happypack/loader?id=js' : 'babel-loader?cacheDirectory=true',
+        use: DEV ? 'babel-loader?cacheDirectory=true' : 'happypack/loader?id=js',
         include: APP_PATH,
       },
       {
         test: /\.scss$/,
         use: [
           {
-            loader: process.env.NODE_ENV === 'production' ? MiniCssExtractPlugin.loader : 'style-loader',
+            loader: DEV ? 'style-loader' : MiniCssExtractPlugin.loader,
           },
           {
             loader: 'css-loader',
@@ -48,7 +55,7 @@ module.exports = {
         test: /\.css$/,
         use: [
           {
-            loader: process.env.NODE_ENV === 'production' ? MiniCssExtractPlugin.loader : 'style-loader',
+            loader: DEV ? 'style-loader' : MiniCssExtractPlugin.loader,
           },
           {
             loader: 'css-loader',
@@ -84,8 +91,8 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'css/styles.[contenthash].css',
-      chunkFilename: 'css/app.[contenthash].css',
+      filename: 'css/[name].[contenthash].css',
+      chunkFilename: 'css/[name].[contenthash].css',
     }),
   ],
 }

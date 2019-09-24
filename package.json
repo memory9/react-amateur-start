@@ -68,6 +68,11 @@
       "git add"
     ]
   },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
   "dependencies": {
     "@hot-loader/react-dom": "^16.9.0",
     "react": "^16.9.0",

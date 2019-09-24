@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{3:function(e,n,t){"use strict";t.r(n);var o=t(0),a=t.n(o),c=t(1);t.n(c).a.render(a.a.createElement("h1",null,"Hello React!"),document.getElementById("root"))}},[[3,3,0]]]);
-//# sourceMappingURL=app.c0147164f3d592e2.js.map
