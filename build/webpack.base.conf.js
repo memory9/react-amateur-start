@@ -5,7 +5,7 @@ const DIST_PATH = path.resolve(__dirname, '../dist')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 // 使用 WEBPACK_SERVE 环境变量检测当前是否是在 webpack-server 启动的开发环境中
-const DEV = Boolean(process.env.WEBPACK_SERVE)
+const DEV = Boolean(process.env.WEBPACK_DEV_SERVER)
 
 module.exports = {
   output: {

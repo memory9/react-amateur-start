@@ -5,7 +5,7 @@ module.exports = {
     es6: true
   },
   // 一个配置文件可以被基础配置中的已启用的规则继承。
-  extends: ["airbnb", "plugin:jsx-a11y/recommended", "plugin:prettier/recommended"],
+  extends: ["airbnb", "plugin:prettier/recommended"],
   // 自定义全局变量
   globals: {
     Atomics: "readonly",
