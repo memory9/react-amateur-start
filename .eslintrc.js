@@ -5,13 +5,14 @@ module.exports = {
     es6: true
   },
   // 一个配置文件可以被基础配置中的已启用的规则继承。
-  extends: ["airbnb", "plugin:prettier/recommended"],
+  extends: ["airbnb", "plugin:jest/recommended", "plugin:prettier/recommended"],
   // 自定义全局变量
   globals: {
     Atomics: "readonly",
     SharedArrayBuffer: "readonly",
     _: true,
-    $: true
+    $: true,
+    cy: true
   },
   // ESLint 默认使用Espree作为其解析器，你可以在配置文件中指定一个不同的解析器
   parserOptions: {

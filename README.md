@@ -5,4 +5,5 @@
 - [x] react-hot-loader
 - [x] eslint, prettier
 - [x] commitlint
+- [x] Jest、Enzyme、Cypress
 
