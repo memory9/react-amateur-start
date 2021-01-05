@@ -10,7 +10,7 @@
   "homepage": "https://memory9.github.io/react-amateur-start",
   "dependencies": {
     "@hot-loader/react-dom": "^16.10.2",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-hot-loader": "^4.12.15",
